@@ -1,0 +1,3 @@
+[submodule "alpine-make-rootfs"]
+	path = alpine-make-rootfs
+	url = https://github.com/alpinelinux/alpine-make-rootfs
