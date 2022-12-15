@@ -37,7 +37,7 @@ jobs:
                 id: extract
                 with:
                     image: simpletoimplement/artifacts:alpine-rootfs
-                    path: /rootfs.tar.gz .
+                    path: /rootfs.tar.gz
             -
                 name: Upload artifact
                 uses: actions/upload-artifact@v2
