@@ -1,0 +1,12 @@
+FROM    simpletoimplement/alpine:edge
+
+RUN     \
+        set -eux \
+&&      apk upgrade --no-cache --update --no-progress --available -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+&&      apk add --update --no-cache --no-progress --upgrade -X http://dl-cdn.alpinelinux.org/alpine/edge/testing git \
+&&      mkdir /repo \
+&&      cd /repo \
+&&      git clone --single-branch https://github.com/alpinelinux/alpine-make-rootfs \
+&&      cd alpine-make-rootfs \
+&&      chmod +x alpine-make-rootfs \
+&&      ./alpine-make-rootfs --branch edge --timezone 'Europe/Tallinn' --script-chroot --packages 'apk-tools tzdata bash curl su-exec>=0.2 ca-certificates' rootfs.tar.gz
