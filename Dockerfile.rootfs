@@ -1,4 +1,4 @@
-FROM    simpletoimplement/alpine:edge
+FROM    ghcr.io/simpletoimplement/alpine:edge
 
 RUN     \
         set -eux \
