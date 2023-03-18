@@ -67,6 +67,8 @@ jobs:
                     push: true
                     tags: ghcr.io/simpletoimplement/alpine:edge
                     platforms: linux/amd64,linux/arm64
+                    provenance: false
+                    sbom: false
             -
                 name: Build and push to dockerhub
                 uses: docker/build-push-action@v4
@@ -75,3 +77,5 @@ jobs:
                     push: true
                     tags: simpletoimplement/alpine:edge
                     platforms: linux/amd64,linux/arm64
+                    provenance: false
+                    sbom: false
