@@ -6,7 +6,7 @@ RUN     \
 &&      apk add --update --no-cache --no-progress --upgrade -X http://dl-cdn.alpinelinux.org/alpine/edge/testing git \
 &&      mkdir /repo \
 &&      cd /repo \
-&&      git clone --single-branch https://github.com/alpinelinux/alpine-make-rootfs \
+&&      git clone --single-branch https://github.com/simpletoimplement/alpine-make-rootfs \
 &&      cd alpine-make-rootfs \
 &&      chmod +x alpine-make-rootfs \
 &&      ./alpine-make-rootfs --branch edge --timezone 'Etc/UTC' --script-chroot --packages 'apk-tools tzdata bash curl ca-certificates' rootfs.tar.gz \
